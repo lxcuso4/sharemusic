@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>share music</title>
+    <link rel="stylesheet" href="share.css"/>
+    <style>
+        #visualizer_wrapper{position: absolute;z-index:10003;   bottom:0; }
+    </style>
+</head>
+<body>
+<div class="bg">
+    <div></div>
+</div>
+<div class=" content">
+    <div id="audio" class="flex_v">
+        <h1 class="text">Let it go</h1>
+        <h2 class="text">author</h2>
+        <div  id="img-box">
+            <img src="head.jpg" alt="img"/>
+            <i id="icon" class="play"></i>
+        </div>
+        <div class=" lrc">
+            <ul id="lrcContainer"></ul>
+        </div>
+        <div class="control">
+            <div class="progress-box " >
+                <div class="t nowtime">
+                    0:00
+                </div>
+                <div class="t alltime">
+                    0:00
+                </div>
+                <div class="play-progress ">
+                    <div>
+                        <div class="loading"></div>
+                        <div class="bar">
+                            <i class="dot">
+                                <i class="bdot"></i>
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="visualizer_wrapper">
+    <canvas id='canvas' width="320" height="220"></canvas>
+</div>
+<div id="info">
+</div>
+
+
+</body>
+<script src="zepto.min.js"></script>
+<script src="share.js"></script>
+<script>
+    window.onload= function () {
+        play($("#audio"));
+    }
+</script>
+</html>
